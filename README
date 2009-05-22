@@ -1,46 +1,59 @@
-= jbehave-br
+= jbehave-i18n
 
-http://github.com/emerleite/jbehave-br
+http://github.com/emerleite/jbehave-i18n
 
-== Descrição
+== Description
 
-Esse Projeto tem por objetivo permitir usar o Jbehave 2 com o idioma português do Brasil.
+The target of this project is to provide an easy way to write jbehave acceptance tests in your language.
 
-== Pré-requisitos em Runtime
+== Runtime dependencies
 
 * Java 1.5
 * Jbehave 2.x
 
-== Instalação
+== Installation
 
-   Para construir o projeto a partir do fonte é necessário o ruby instalado. 
-   Se você não sabe como instalar o google é seu amigo - http://www.google.com.br/search?q=instalando+ruby
-   
-   É necessário também o buildr para buildar o projeto - http://buildr.apache.org
-    - sudo env JAVA_HOME=$JAVA_HOME gem install buildr
-   
-   Após instalar é só clonar o repositório e buildar o projeto:
-   - git clone git://github.com/emerleite/jbehave-br.git
-   - cd jbehave-br
+   To build jbehave-i18n from source you must have ruby installed in your system
+   If you don't kwnow how to install ruby, google is your best friend :) - http://www.google.com/search?q=ruby+install
+
+   You also need buildr - http://buildr.apache.org
+       - sudo env JAVA_HOME=$JAVA_HOME gem install buildr
+
+   Then, just clone jbehave i18n repo and build it:
+   - git clone git://github.com/emerleite/jbehave-i18n.git
+   - cd jbehave-i18n
    - buildr package
 
-   Adicione o jar que será gerado em target/jbehave-br-VERSION.jar ao classpath da sua aplicação.
+   Add the jar file located on target/jbehave-i18n-VERSION.jar to your application classpath.
 
-== Utilização
+== Getting Started
 
-   Ao criar as especificações do Jbehave proceda da seguinte forma:
-   - Arquivos texto com a extensão .cenario - Ex: cadastro_valido.cenario
-   - Estender de PtBRScenario ao invés de Scenario.
-   - Estebder de PtBRSteps ao invés de Steps.
-   - Arquivo texto deve estar no mesmo pacote que a classe do Scenario.
-   - No arquivo.cenario utilizar as palavras Cenário, Dado, Quando, Então, E.
+   Step 1: Create a keyword.properties to be deployed in root of your application runtime classpath
+   Step 2: Define keys for keyword.scenario, keyword.given, keyword.when, keyword.then and keyword.and
 
-   Maiores detalhes basta os testes em src/test/java e src/test/resources.
+   Step 3: Create your specifications like this:
+   - Spec files must end with .scenario - Ex:something.scenario
+   - Must extend I18nScenario insted of Scenario
+   - Must extend I18nSteps insted of Steps
+   - Spec file must be in the same package of Scenario class
 
-== Licença
+   Step 4: Take a look at src/test/java and src/test/resources. Its the best way to learn jbehave-i18n
 
-Veja o arquivo LICENSE.txt para detalhes.
+   In Throuble? Open a ticket at http://github.com/emerleite/jbehave-i18n/issues
 
+== Licence
 
+See LICENSE.txt for details.
 
+== Notes
+   - Java 5 and early uses ISO8859-1 to load a properties file, so you need to use this encoding in your
+   keywords.properties to things work properly. If you need, use Unicode code points to represent some chars not supported by ISO8859-1.
+   Future versions will avoid you of this hell.
 
+   - jbehave-i18n have only been tested with United States English and Brasilian Portuguese, so if you have
+   problems with your language, contact me. First, try Unicode code points :)
+
+== Contact
+   Emerson Macedo
+   emerleite at gmail dot com
+   http://codificando.com
