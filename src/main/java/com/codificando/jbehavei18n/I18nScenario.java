@@ -13,7 +13,7 @@ public class I18nScenario extends Scenario {
 		 super(new PropertyBasedConfiguration() {
 			 	public ScenarioDefiner forDefiningScenarios() {
 	                return new ClasspathScenarioDefiner(
-	                    new UnderscoredCamelCaseResolver(".cenario"), 
+	                    new UnderscoredCamelCaseResolver(".scenario"), 
 	                    new PatternScenarioParser(this), Thread.currentThread().getContextClassLoader());
 	            }
 			 

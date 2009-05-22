@@ -1,6 +1,0 @@
-Cenário: Nome em português do Brasil
-
-Dado que eu quero rodar o Jbehave em português do Brasil
-Quando eu usar o meu idioma
-Então tudo deve funcionar perfeitamente
-
