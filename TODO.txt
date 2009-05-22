@@ -1,5 +1,5 @@
 TODO LIST
 =========
 
-- Criar annotations Dado, Quando, Entao para ser usado no lugar de Given, When, Then (Não será possível pois java não suporta extensão de annotations. Verificarei outra forma de fazer.)
-- Adicionar suporte a i18n ao invés de código de tradução hard coded.
+- Support for UTF-8 and UTF-16 text files (maybe YAML with some  parser)
+- Test more locales. If you can help, thanks.
