@@ -10,6 +10,7 @@ repositories.remote << "http://www.ibiblio.org/maven2/"
 repositories.remote << "http://mvnrepository.com/artifact/"
 repositories.remote << "http://mirrors.ibiblio.org/pub/mirrors/maven2/"
 repositories.remote << "http://repository.codehaus.org/"
+repositories.remote << "http://snakeyamlrepo.appspot.com/repository"
 
 desc "Jbehave-i18n. Now you can use jbehave in your language"
 define "jbehave-i18n" do
