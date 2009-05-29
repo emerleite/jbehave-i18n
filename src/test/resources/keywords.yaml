@@ -1,0 +1,5 @@
+scenario: Cenário
+given: Dado
+when: Quando
+then: Então
+and: E
