@@ -1,5 +1,4 @@
 TODO LIST
 =========
 
-- Support for UTF-8 and UTF-16 text files (maybe YAML with some  parser)
 - Test more locales. If you can help, thanks.
