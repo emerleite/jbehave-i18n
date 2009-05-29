@@ -19,7 +19,7 @@ define "jbehave-i18n" do
   project.group = GROUP
   manifest["Implementation-Vendor"] = COPYRIGHT
   compile.options.target = '1.5'
-
+  
   compile.with JBEHAVE2, JUNIT, SNAKE_YAML
   package :jar
 end
