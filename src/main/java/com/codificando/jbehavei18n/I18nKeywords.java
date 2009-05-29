@@ -1,7 +1,10 @@
 package com.codificando.jbehavei18n;
 
+import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
-import java.util.ResourceBundle;
+import java.util.Map;
+
+import org.yaml.snakeyaml.Yaml;
 
 public class I18nKeywords {
 	private String scenario;
@@ -12,16 +15,18 @@ public class I18nKeywords {
 	private static final I18nKeywords INSTANCE = new I18nKeywords();
 	
 	private I18nKeywords() {
-		ResourceBundle keywords = ResourceBundle.getBundle("keywords");
-		this.scenario = convertToUTF8(keywords.getString("keyword.scenario"));
-		this.given = convertToUTF8(keywords.getString("keyword.given"));
-		this.when = convertToUTF8(keywords.getString("keyword.when"));
-		this.then = convertToUTF8(keywords.getString("keyword.then"));
+		InputStream input = this.getClass().getResourceAsStream("/keywords.yaml");
+		Yaml yaml = new Yaml();
+		Map<String, String> keywords = (Map<String, String>) yaml.load(input);
+		this.scenario = readInUTF8(keywords.get("scenario"));
+		this.given = readInUTF8(keywords.get("given"));
+		this.when = readInUTF8(keywords.get("when"));
+		this.then = readInUTF8(keywords.get("then"));	
 	}
 	
 	public static I18nKeywords getInstance() {return INSTANCE;}
 
-	public String convertToUTF8(String valor) {
+	public String readInUTF8(String valor) {
 		try {
 			return new String(valor.getBytes("UTF-8"));
 		} catch (UnsupportedEncodingException e) {throw new RuntimeException("Should not throw this encoding error");}		
