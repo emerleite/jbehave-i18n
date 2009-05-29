@@ -4,6 +4,7 @@ COPYRIGHT = "Emerson Macedo - codificando.com (c) 2009"
 
 JBEHAVE2 = ['org.jbehave:jbehave-core:jar:2.1.1','org.hamcrest:hamcrest-all:jar:1.1']
 JUNIT = 'junit:junit:jar:4.4'
+SNAKE_YAML = 'SnakeYAML:SnakeYAML:jar:1.2'
 
 repositories.remote << "http://www.ibiblio.org/maven2/"
 repositories.remote << "http://mvnrepository.com/artifact/"
@@ -18,6 +19,6 @@ define "jbehave-i18n" do
   manifest["Implementation-Vendor"] = COPYRIGHT
   compile.options.target = '1.5'
 
-  compile.with JBEHAVE2, JUNIT
+  compile.with JBEHAVE2, JUNIT, SNAKE_YAML
   package :jar
 end
