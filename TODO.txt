@@ -2,3 +2,4 @@ TODO LIST
 =========
 
 - Test more locales. If you can help, thanks.
+- Correct problem of compile with encoding UTF-8
