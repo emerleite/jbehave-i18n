@@ -14,6 +14,7 @@ public class I18nKeywords {
 	private String and;
 	private static final I18nKeywords INSTANCE = new I18nKeywords();
 	
+	@SuppressWarnings("unchecked")
 	private I18nKeywords() {
 		InputStream input = this.getClass().getResourceAsStream("/keywords.yaml");
 		Yaml yaml = new Yaml();
