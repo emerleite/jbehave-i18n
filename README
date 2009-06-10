@@ -46,12 +46,10 @@ The target of this project is to provide an easy way to write jbehave acceptance
 See LICENSE.txt for details.
 
 == Notes
-   - Java 5 and early uses ISO8859-1 to load a properties file, so you need to use this encoding in your
-   keywords.properties to things work properly. If you need, use Unicode code points to represent some chars not supported by ISO8859-1.
-   Future versions will avoid you of this hell.
+   - Now we are using YAML and you can encode your keywords.yaml file using UTF-8.
 
    - jbehave-i18n have only been tested with United States English and Brasilian Portuguese, so if you have
-   problems with your language, contact me. First, try Unicode code points :)
+   problems with your language, contact me. Don't forget to encode your keywords.yaml in UTF-8.
 
 == Contact
    Emerson Macedo
