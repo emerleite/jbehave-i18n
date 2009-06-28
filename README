@@ -28,8 +28,14 @@ The target of this project is to provide an easy way to write jbehave acceptance
 
 == Getting Started
 
-   Step 1: Create a keyword.properties to be deployed in root of your application runtime classpath
-   Step 2: Define keys for keyword.scenario, keyword.given, keyword.when, keyword.then and keyword.and
+   Step 1: Create a keyword.yaml to be deployed in root of your application runtime classpath
+   Step 2: Define keys for "scenario", "given", "when", "then" and "and". Encode this file with UTF-8
+   Ex:
+       scenario: Cenário
+       given: Dado
+       when: Quando
+       then: Então
+       and: E
 
    Step 3: Create your specifications like this:
    - Spec files must end with .scenario - Ex:something.scenario
